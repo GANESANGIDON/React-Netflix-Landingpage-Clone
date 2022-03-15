@@ -2,9 +2,9 @@ import React from 'react'
 import './css/FAQs.css'
 
 export default function Accordian() {
-  const accordianBtn = document.querySelectorAll('.FAQ-button')
-  for (let i = 0; i < accordianBtn.length; i++) {
-    accordianBtn[i].addEventListener('click', () => {
+  const accordians = document.querySelectorAll('.FAQ-button')
+  for (let i = 0; i < accordians.length; i++) {
+    accordians[i].addEventListener('click', function () {
       if (this.childNodes[1].classList.contains('fa-plus')) {
         this.childNodes[1].classList.remove('fa-plus')
         this.childNodes[1].classList.add('fa-times')
@@ -12,11 +12,11 @@ export default function Accordian() {
         this.childNodes[1].classList.remove('fa-times')
         this.childNodes[1].classList.add('fa-plus')
       }
-      const accordianContent = this.nextElementSibling
-      if (accordianContent.style.maxHeight) {
-        this.style.maxHeight = null
+      let content = this.nextElementSibling
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null
       } else {
-        this.style.maxHeight = accordianContent.scrollHeight + 'px'
+        content.style.maxHeight = content.scrollHeight + 'px'
       }
     })
   }
