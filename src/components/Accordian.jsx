@@ -2,7 +2,7 @@ import React from 'react'
 import './css/FAQs.css'
 
 export default function Accordian() {
-  const accordians = document.querySelectorAll('.FAQ-button')
+  let accordians = document.querySelectorAll('.FAQ-button')
   for (let i = 0; i < accordians.length; i++) {
     accordians[i].addEventListener('click', function () {
       if (this.childNodes[1].classList.contains('fa-plus')) {
