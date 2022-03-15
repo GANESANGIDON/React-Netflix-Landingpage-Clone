@@ -2,4 +2,4 @@
 
 ### netflix landing page clone using create-react-app.
 
-### website link : https://ganesangidon.github.io/React-Netflix-Landingpage-Clone/
+### website link : https://react-netflix-landingpage-clone.vercel.app/
