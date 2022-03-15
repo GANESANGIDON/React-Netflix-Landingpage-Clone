@@ -1,0 +1,160 @@
+/* Email component css */
+
+/* email form container */
+.mail-form-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+
+/* email input and label container */
+.email-label-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  margin: 10px 0px;
+  border-radius: 2px;
+}
+
+.mail-input,
+.mail-label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* email input */
+.mail-input {
+  outline: none;
+  border: none;
+  height: inherit;
+  padding: 0px 3%;
+  padding-top: 5px;
+  width: 100%;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.mail-input:focus {
+  outline: 2px solid dodgerblue;
+}
+
+.mail-input:focus+.mail-label {
+  top: 1%;
+  transform: scale(0.8);
+  transform-origin: left;
+}
+
+.mail-input:not(:placeholder-shown).mail-input:not(:focus)+.mail-label {
+  top: 1%;
+  transform: scale(0.8);
+  transform-origin: left;
+}
+
+/* email label */
+.mail-label {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 3%;
+  color: grey;
+  transition: 0.3s;
+}
+
+/* get started button */
+.start-button {
+  color: white;
+  background-color: var(--btn-color);
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  margin: 5px 0px;
+  border-radius: 2px;
+}
+
+.start-button:hover {
+  background-color: red;
+  outline: 2px solid var(--btn-color);
+}
+
+.start-button:active {
+  background-color: var(--btn-color);
+}
+
+/* ------------------------------------------- */
+
+/*for large tablet  devices*/
+@media (min-width: 481px) {
+
+  .email-label-container {
+    height: 45px;
+  }
+
+  .mail-input,
+  .mail-label {
+    font-size: 14px;
+  }
+}
+
+/* ------------------------------------------- */
+
+/*for large tablet  devices*/
+@media (min-width: 768px) {
+
+  .mail-form-container {
+    width: 80%;
+  }
+}
+
+/* ------------------------------------------- */
+
+/*for large devices*/
+@media (min-width: 1024px) {
+
+  .mail-form-container {
+    flex-direction: row;
+  }
+
+  .email-label-container {
+    display: inline-block;
+    height: 50px;
+    margin: 0px;
+  }
+
+  .mail-input,
+  .email-label-container {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .mail-input,
+  .mail-label {
+    font-weight: 510;
+  }
+
+  .start-button {
+    border-left: 1px solid #353535;
+    height: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+/* ------------------------------------------- */
+
+/* For estra large devices */
+@media(min-width: 1201px) {
+
+  .mail-form-container {
+    width: 65%;
+  }
+
+  .mail-input,
+  .mail-label {
+    font-size: 15px;
+  }
+}

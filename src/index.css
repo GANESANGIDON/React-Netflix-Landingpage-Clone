@@ -1,13 +1,232 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* NETFLIX landing page clone */
+
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* To reset the browser default properties */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+  color: white;
+  background-color: black;
+}
+
+:root {
+  --font-fa-solid: "Font Awesome 5 Pro";
+  --font-icons-weight: 900;
+  --btn-color: #E50914;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* language drop-down container */
+.lang-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.lang-container::before,
+.lang-container::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-family: var(--font-fa-solid);
+  font-weight: var(--font-icons-weight);
+}
+
+/* language selector */
+.lang-selector {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  appearance: none;
+}
+
+.lang-selector option {
+  display: inline;
+  background: #8d8d8d;
+}
+
+.heading, .fpara, .spara{
+  margin: 5px auto;
+  text-align: center;
+}
+
+/* hero heading */
+.heading {
+  width: 90%;
+  font-size: 1.4rem;
+  font-weight: 520;
+}
+
+/* hero subheadings */
+.fpara,
+.spara {
+  width: 90%;
+  font-size: 0.9rem;
+}
+
+/* For horizontal line */
+section {
+  border-bottom: 8px solid #242424;
+}
+
+/* features section */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 45px 10px;
+}
+
+/* features description container*/
+.feature-details {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* features title */
+.feature-title {
+  font-size: 1.6rem;
+  font-weight: 530;
+}
+
+/* features description subtitle */
+.feature-subtitle {
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+
+/* features image container*/
+.fimage-container {
+  position: relative;
+  width: 100%;
+}
+
+/* features image*/
+.fimage {
+  width: 100%;
+}
+
+/* features video */
+.feature-video {
+  width: 100%;
+}
+
+/* feature1-video-container */
+.feature1-video-container {
+  position: absolute;
+  width: 74%;
+  top: 20%;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: -1;
+}
+
+/* feature3-video-container */
+.feature3-video-container {
+  position: absolute;
+  width: 62%;
+  top: 12%;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: -1;
+}
+
+/* ------------------------------------------- */
+
+/*for large mobile and tablet devices*/
+@media (min-width: 481px) {
+
+  .features {
+    padding: 45px 40px;
+  }
+
+}
+
+/* ------------------------------------------- */
+
+/*for large tablet  devices*/
+@media (min-width: 768px) {
+
+  .heading {
+    width: 80%;
+    font-size: 1.6rem;
+  }
+
+  .fpara,
+  .spara {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .features {
+    padding: 45px 100px;
+  }
+
+  .feature-title {
+    font-size: 1.8rem;
+  }
+
+  .feature-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* ------------------------------------------- */
+
+/*for large devices*/
+@media (min-width: 1024px) {
+
+  .features {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px 0px;
+  }
+
+  .feature-title {
+    font-size: 1.9rem;
+  }
+
+  .feature-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .even-section {
+    flex-direction: row-reverse;
+  }
+
+  .feature-details,
+  .fimage-container {
+    width: 40%;
+  }
+}
+
+/* ------------------------------------------- */
+
+/* For estra large devices */
+@media(min-width: 1201px) {
+
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .fpara,
+  .spara {
+    font-size: 1.2rem;
+  }
 }

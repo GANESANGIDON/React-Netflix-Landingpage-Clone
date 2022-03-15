@@ -1,0 +1,57 @@
+/* Home component css */
+
+/* hero section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+}
+
+/* hero section bg-img container*/
+#bg-image-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* hero section bg-img */
+.bg-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* hero section overlay effect*/
+#bg-image-container::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7));
+}
+
+/* hero content container */
+#hero-content-container {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------------- */
+
+/*for large mobile and tablet devices*/
+@media (min-width: 481px) {
+
+  .hero-section {
+    height: 100vh;
+  }
+}

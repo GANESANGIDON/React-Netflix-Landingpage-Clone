@@ -1,0 +1,146 @@
+/* Header section css */
+
+/* Header */
+header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  margin-top: 20px;
+  padding: 0px 15px;
+}
+
+/* Netflix logo container */
+#logo-container {
+  width: 90px;
+}
+
+/* Netflix logo */
+#logo {
+  width: 100%;
+}
+
+#header-lang-container {
+  color: white;
+  margin-right: 10px;
+}
+
+#header-lang-container::before {
+  left: 6px;
+  content: "\f0ac";
+  font-size: 0.8rem;
+}
+
+/* header language container */
+#header-lang-container::after {
+  right: 8px;
+  content: "\f0d7";
+  font-size: 1rem;
+}
+
+/* header language selector */
+#header-lang-selector {
+  padding: 6px 20px;
+  border: 1px solid #8e8e8e;
+}
+
+/* hero section signin-button */
+.signin-button {
+  color: white;
+  font-size: 15px;
+  background-color: var(--btn-color);
+  padding: 4px 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.signin-button:hover {
+  background-color: red;
+}
+
+.signin-button:active {
+  background-color: var(--btn-color);
+}
+
+/* ------------------------------------------- */
+
+/*for large mobile and tablet devices*/
+@media (min-width: 481px) {
+
+  header {
+    margin-top: 25px;
+    padding: 0px 30px;
+  }
+
+  #logo-container {
+    width: 100px;
+  }
+
+  #header-lang-selector {
+    padding: 7px 22px;
+  }
+
+  .signin-button {
+    padding: 5px 12px;
+  }
+}
+
+/* ------------------------------------------- */
+
+/*for large tablet  devices*/
+@media (min-width: 768px) {
+
+  #logo-container {
+    width: 120px;
+  }
+
+  #header-lang-container {
+    margin-right: 20px;
+  }
+
+  #header-lang-selector {
+    padding: 8px 24px;
+  }
+
+  .signin-button {
+    padding: 6px 14px;
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------------------- */
+
+/* For estra large devices */
+@media(min-width: 1201px) {
+
+  #logo-container {
+    width: 140px;
+  }
+
+  #header-lang-container {
+    margin-right: 25px;
+  }
+
+  #header-lang-container::before {
+    left: 9px;
+    font-size: 0.9rem;
+  }
+
+  #header-lang-container::after {
+    right: 10px;
+    font-size: 1.2rem;
+  }
+
+  #header-lang-selector {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  .signin-button {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+}
+
