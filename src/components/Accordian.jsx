@@ -2,24 +2,25 @@ import React from 'react'
 import './css/FAQs.css'
 
 export default function Accordian() {
-  let accordian = document.querySelectorAll('.FAQ-button')
-  for (let i = 0; i < accordian.length; i++) {
-    accordian[i].addEventListener('click', function () {
-      if (this.childNodes[1].classList.contains('fa-plus')) {
-        this.childNodes[1].classList.remove('fa-plus')
-        this.childNodes[1].classList.add('fa-times')
-      } else {
-        this.childNodes[1].classList.remove('fa-times')
-        this.childNodes[1].classList.add('fa-plus')
-      }
-      let content = this.nextElementSibling
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px'
-      }
-    })
-  }
+  let accordian = document.getElementsByClassName('FAQ-button')
+for (let i = 0; i < accordian.length; i++) {
+  accordian[i].addEventListener('click', function () {
+    if (this.childNodes[1].classList.contains('fa-plus')) {
+      this.childNodes[1].classList.remove('fa-plus')
+      this.childNodes[1].classList.add('fa-times')
+    } else {
+      this.childNodes[1].classList.remove('fa-times')
+      this.childNodes[1].classList.add('fa-plus')
+    }
+    let content = this.nextElementSibling
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px'
+    }
+  })
+}
+
 
   return (
     <React.Fragment>
